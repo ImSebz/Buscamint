@@ -149,4 +149,19 @@ body {
     line-height: 1.2;
 }
 
+@media screen and (max-width: 1366px) { 
+
+    .answerBtn {
+        margin-bottom: 5%;
+        width: 200px;
+        height: 80px;
+        font-size: 2rem;
+    }
+
+    .option-p {
+        font-size: 1.6rem;
+        margin-bottom: 50px;
+    }
+}
+
 

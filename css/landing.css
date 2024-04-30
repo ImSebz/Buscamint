@@ -86,3 +86,13 @@ body {
     background: var(--main-green);
     color: var(--main-yellow);
 }
+
+@media screen and (max-width: 1366px) {
+    .landing-text p {
+        width: 85%;
+        font-size: 1.2rem;
+        text-align: center;
+        font-family: 'GothamLight', sans-serif, Arial;
+        margin-top: 5%;
+    }
+}
