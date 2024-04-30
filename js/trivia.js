@@ -137,9 +137,14 @@ let currentQuestionIndex = 0;
 
 //HTML Elements
 const questionP = document.querySelector('.question-p');
+const questionContainer = document.querySelector('.question-container');
 const imgQuestionContainer = document.querySelector('.img-question-container');
+const anwsersContainer = document.querySelector('.anwsers-container');
 const btnYes = document.getElementById('btn-yes');
 const btnNo = document.getElementById('btn-no');
+const body = document.querySelector('body');
+const optionP = document.querySelector('.option-p');
+
 
 const displayQuestion = () => {
     const currentQuestion = preguntas[currentQuestionIndex];
@@ -164,24 +169,28 @@ const handleClick = (event) => {
     }
     else {
         if (pointsCounter >= 8) {
-            imgQuestionContainer.innerHTML = '';
-            questionP.innerText = 'Tus síntomas pueden ser típicos del SII (Síndrome del Intestino Irritable). Por lo tanto, es importante que discutas estos síntomas y cualquier otro que puedas estar experimentando con tu médico.';
+            imgQuestionContainer.style = 'display: none';
+            anwsersContainer.style = 'display: none';
+            questionContainer.style = 'display: none';
+            body.style = 'background: url(/assets/trivia_bg_option1.jpg); background-size: cover; background-repeat: no-repeat;';
+            optionP.innerHTML = '<strong>Tus síntomas pueden ser típicos del SII (Síndrome del Intestino Irritable).</strong><br> Por lo tanto, es importante que discutas estos síntomas y cualquier otro que puedas estar experimentando con tu médico.';
         }
 
         else {
-            imgQuestionContainer.innerHTML = '';
-            questionP.innerText = 'Tus síntomas pueden no ser típicos del SII (Síndrome de Intestino Irritable). Si no experimentas dolor abdominal recurrente en combinación con movimientos intestinales anormales (estreñimiento y/o diarrea), es posible que no tengas SII. Si tus síntomas persisten y/o empeoran, consulta a tu médico';
+            imgQuestionContainer.style = 'display: none';
+            anwsersContainer.style = 'display: none';
+            questionContainer.style = 'display: none';
+            body.style = 'background: url(/assets/trivia_bg_option2.jpg); background-size: cover; background-repeat: no-repeat;';
+            optionP.innerHTML = '<strong>Tus síntomas pueden no ser típicos del SII (Síndrome de Intestino Irritable).</strong><br>Si no experimentas dolor abdominal recurrente en combinación con movimientos intestinales anormales (estreñimiento y/o diarrea), es posible que no tengas SII. Si tus síntomas persisten y/o empeoran, consulta a tu médico';
         }
-        btnYes.style = 'display: none';
-        btnNo.style = 'display: none';
-
+    
         setTimeout(() => {
             pointsCounter = 0;
             currentQuestionIndex = 0;
             btnYes.style = '';
             btnNo.style = '';
             window.location.href = 'index.html';
-        }, 10000);
+        }, 12000);
     }
 };
 

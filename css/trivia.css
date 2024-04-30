@@ -30,7 +30,7 @@ body {
     width: 100%;
     height: 100vh;
     background: url(/assets/trivia_bg_buscamint.jpg);
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 
@@ -59,11 +59,11 @@ body {
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 200px;
+    margin-top: 300px;
 }
 
 .img-question-container img {
-    width: 40%;
+    width: 33%;
 }
 
 .question-container {
@@ -81,7 +81,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 2.3rem;
     text-align: center;
     margin-bottom: 1rem;
     font-family: 'GothamBold', sans-serif, Arial;
@@ -113,4 +113,25 @@ body {
     font-size: 2.8rem;
     border-radius: 50px;
     transition: 0.5s;
+    box-shadow: 0 10px 0 #FAB700;
 }
+
+.option-text {
+    display: flex;
+    position: relative;
+    top: 30%;
+    justify-content: center;
+}
+
+.option-p {
+    font-size: 1.8rem;
+    margin-top: 90px;
+    font-family: 'GothamLight', sans-serif, Arial;
+    color: #fff;
+    margin-left: 10px;
+    text-align: center;
+    width: 75%;
+    line-height: 1.2;
+}
+
+
