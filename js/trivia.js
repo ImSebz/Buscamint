@@ -137,12 +137,19 @@ let currentQuestionIndex = 0;
 
 //HTML Elements
 const questionP = document.querySelector('.question-p');
+const imgQuestionContainer = document.querySelector('.img-question-container');
 const btnYes = document.getElementById('btn-yes');
 const btnNo = document.getElementById('btn-no');
 
 const displayQuestion = () => {
     const currentQuestion = preguntas[currentQuestionIndex];
     questionP.innerText = currentQuestion.question;
+    const createImg = document.createElement('img');
+
+    // Asignar imagen a la pregunta
+    createImg.src = `assets/trivia_${currentQuestionIndex + 1}.png`;
+    imgQuestionContainer.innerHTML = '';
+    imgQuestionContainer.appendChild(createImg);
 
     // Asignar puntos a los botones
     btnYes.dataset.points = currentQuestion.options[0].points;
@@ -157,10 +164,12 @@ const handleClick = (event) => {
     }
     else {
         if (pointsCounter >= 8) {
+            imgQuestionContainer.innerHTML = '';
             questionP.innerText = 'Tus síntomas pueden ser típicos del SII (Síndrome del Intestino Irritable). Por lo tanto, es importante que discutas estos síntomas y cualquier otro que puedas estar experimentando con tu médico.';
         }
 
         else {
+            imgQuestionContainer.innerHTML = '';
             questionP.innerText = 'Tus síntomas pueden no ser típicos del SII (Síndrome de Intestino Irritable). Si no experimentas dolor abdominal recurrente en combinación con movimientos intestinales anormales (estreñimiento y/o diarrea), es posible que no tengas SII. Si tus síntomas persisten y/o empeoran, consulta a tu médico';
         }
         btnYes.style = 'display: none';
@@ -171,8 +180,8 @@ const handleClick = (event) => {
             currentQuestionIndex = 0;
             btnYes.style = '';
             btnNo.style = '';
-            displayQuestion();
-        }, 15000);
+            window.location.href = 'index.html';
+        }, 10000);
     }
 };
 

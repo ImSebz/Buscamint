@@ -4,9 +4,47 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'GothamBold';
+    src: url('/fonts/GothamBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GothamMedium';
+    src: url('/fonts/GothamMedium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GothamLight';
+    src: url('/fonts/GothamLight.ttf') format('truetype');
+}
+
+:root {
+    --main-green: #35693d;
+    --main-yellow: #FFD300;
+    --second-yellow: #FAB700;
+}
+
+
 body {
     width: 100%;
     height: 100vh;
+    background: url(/assets/trivia_bg_buscamint.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.trivia-logo {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.trivia-logo img {
+    width: 40%;
 }
 
 .main-container {
@@ -17,27 +55,62 @@ body {
     flex-direction: column;
 }
 
+.img-question-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.img-question-container img {
+    width: 40%;
+}
+
 .question-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
-    margin-bottom: 30px;
+    width: 100%;
+    margin-bottom: 20%;
+    margin-top: 20%;
+    max-height: 180px;
 }
 
 .question-p {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-align: center;
     margin-bottom: 1rem;
+    font-family: 'GothamBold', sans-serif, Arial;
+    color: var(--main-green);
     height: 100%;
+    width: 70%;
+}
+
+.anwsers-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 100px;
+
 }
 
 .answerBtn {
-    width: 100px;
-    height: 50px;
-    font-size: 2rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background: var(--main-yellow);
+    color: var(--main-green);
+    font-family: 'GothamMedium', sans-serif, Arial;
+    font-weight: bold;
+    border: none;
+    width: 250px;
+    height: 100px;
+    font-size: 2.8rem;
+    border-radius: 50px;
+    transition: 0.5s;
 }
