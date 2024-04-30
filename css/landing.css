@@ -87,7 +87,7 @@ body {
     color: var(--main-yellow);
 }
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-height: 1366px) and (orientation: portrait) {
     .landing-text p {
         width: 85%;
         font-size: 1.2rem;
