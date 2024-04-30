@@ -42,14 +42,11 @@ body {
 .landing-logo {
     display: flex;
     justify-content: center;
-    align-self: flex-start;
     width: 100%;
     margin-top: 2%;
+    visibility: hidden;
 }
 
-.landing-logo img {
-    width: 50%;
-}
 
 .landing-text {
     display: flex;
@@ -62,7 +59,7 @@ body {
 }
 
 .landing-text p {
-    width: 90%;
+    width: 85%;
     font-size: 1.68rem;
     text-align: center;
     font-family: 'GothamLight', sans-serif, Arial;
@@ -70,8 +67,8 @@ body {
 }
 
 .landing-text button {
-    margin-top: 8%;
-    margin-bottom: 3%;
+    margin-top: 10%;
+    margin-bottom: 10%;
     background: var(--main-yellow);
     color: var(--main-green);
     font-family: 'GothamMedium', sans-serif, Arial;

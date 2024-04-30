@@ -39,9 +39,8 @@ body {
     position: absolute;
     display: flex;
     width: 100%;
-    justify-content: center;
     align-items: center;
-    margin-top: 10%;
+    /* margin-top: 10%; */
 }
 
 .trivia-logo img {
@@ -88,6 +87,21 @@ body {
     font-family: 'GothamBold', sans-serif, Arial;
     color: var(--main-green);
     height: 100%;
+    width: 70%;
+}
+
+.options {
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -120px;
+    margin-bottom: 50px;
+    gap: 50px
+}
+
+.options img {
     width: 70%;
 }
 

@@ -13,7 +13,7 @@ const preguntas = [
         ]
     },
     {
-        "question":`¿Tu dolor abdominal está asociado con al menos 2 de los siguientes síntomas?\n\na) Dolor relacionado al defecar.\nb) Cambio en la frecuencia de defecación.\nc) Cambio en la apariencia de tus heces`,
+        "question":'¿Tu dolor abdominal está asociado con al menos 2 de los siguientes síntomas?',
         "options": [
             {
                 "text": "Si",
@@ -144,6 +144,8 @@ const btnYes = document.getElementById('btn-yes');
 const btnNo = document.getElementById('btn-no');
 const body = document.querySelector('body');
 const optionP = document.querySelector('.option-p');
+const triviaLogo = document.querySelector('.trivia-logo');
+const options = document.querySelector('.options');
 
 
 const displayQuestion = () => {
@@ -162,8 +164,17 @@ const displayQuestion = () => {
 };
 
 const handleClick = (event) => {
+    imgQuestionContainer.style = 'display: flex';
+    options.style = 'display: none';
     pointsCounter += Number(event.target.dataset.points);
     currentQuestionIndex++;
+
+    if ( currentQuestionIndex === 1) {
+        imgQuestionContainer.style = 'display: none';
+        options.style = 'display: flex';
+    }
+
+
     if (currentQuestionIndex < preguntas.length) {
         displayQuestion();
     }
@@ -172,7 +183,8 @@ const handleClick = (event) => {
             imgQuestionContainer.style = 'display: none';
             anwsersContainer.style = 'display: none';
             questionContainer.style = 'display: none';
-            body.style = 'background: url(/assets/trivia_bg_option1.jpg); background-size: cover; background-repeat: no-repeat;';
+            triviaLogo.style = 'justify-content: center; margin-top: 5%;';
+            body.style = 'background: url(/assets/trivia_bg_option1.jpg); background-size: 100% 100%; background-repeat: no-repeat;';
             optionP.innerHTML = '<strong>Tus síntomas pueden ser típicos del SII (Síndrome del Intestino Irritable).</strong><br> Por lo tanto, es importante que discutas estos síntomas y cualquier otro que puedas estar experimentando con tu médico.';
         }
 
@@ -180,7 +192,8 @@ const handleClick = (event) => {
             imgQuestionContainer.style = 'display: none';
             anwsersContainer.style = 'display: none';
             questionContainer.style = 'display: none';
-            body.style = 'background: url(/assets/trivia_bg_option2.jpg); background-size: cover; background-repeat: no-repeat;';
+            triviaLogo.style = 'visibility: hidden;';
+            body.style = 'background: url(/assets/trivia_bg_option2.jpg); background-size: 100% 100%; background-repeat: no-repeat;';
             optionP.innerHTML = '<strong>Tus síntomas pueden no ser típicos del SII (Síndrome de Intestino Irritable).</strong><br>Si no experimentas dolor abdominal recurrente en combinación con movimientos intestinales anormales (estreñimiento y/o diarrea), es posible que no tengas SII. Si tus síntomas persisten y/o empeoran, consulta a tu médico';
         }
     
@@ -190,7 +203,7 @@ const handleClick = (event) => {
             btnYes.style = '';
             btnNo.style = '';
             window.location.href = 'index.html';
-        }, 12000);
+        }, 20000);
     }
 };
 
