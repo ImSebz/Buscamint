@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'GothamBold';
-    src: url('/fonts/GothamBold.ttf') format('truetype');
+    src: url('../fonts/GothamBold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'GothamMedium';
-    src: url('/fonts/GothamMedium.ttf') format('truetype');
+    src: url('../fonts/GothamMedium.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'GothamLight';
-    src: url('/fonts/GothamLight.ttf') format('truetype');
+    src: url('../fonts/GothamLight.ttf') format('truetype');
 }
 
 :root {
