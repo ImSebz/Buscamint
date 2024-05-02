@@ -146,6 +146,7 @@ const body = document.querySelector('body');
 const optionP = document.querySelector('.option-p');
 const triviaLogo = document.querySelector('.trivia-logo');
 const options = document.querySelector('.options');
+const answerBtn = document.querySelector('.answerBtn');
 
 
 const displayQuestion = () => {
@@ -203,7 +204,7 @@ const handleClick = (event) => {
             btnYes.style = '';
             btnNo.style = '';
             window.location.href = 'index.html';
-        }, 20000);
+        }, 12000);
     }
 };
 
