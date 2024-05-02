@@ -184,7 +184,7 @@ const handleClick = (event) => {
             imgQuestionContainer.style = 'display: none';
             anwsersContainer.style = 'display: none';
             questionContainer.style = 'display: none';
-            triviaLogo.style = 'justify-content: center; margin-top: 5%;';
+            triviaLogo.style = 'justify-content: center; margin-top: 5%; margin-left: 0; margin-top: 0 ;';
             body.style = 'background: url(./assets/trivia_bg_option1.jpg); background-size: 100% 100%; background-repeat: no-repeat;';
             optionP.innerHTML = '<strong>Tus síntomas pueden ser típicos del SII (Síndrome del Intestino Irritable).</strong><br> Por lo tanto, es importante que discutas estos síntomas y cualquier otro que puedas estar experimentando con tu médico.';
         }
